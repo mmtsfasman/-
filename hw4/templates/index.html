@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <title>РЖЯ - русский словарь</title>
+
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <!--  link rel=stylesheet type=text/css href={{url_for('static', filename='bootstrap.min.css')}} -->
+
+    </head>
+
+    <body>
+
+        <div class="jumbotron text-center">
+          <h1>РЖЯ - русский словарь</h1>
+          <p>Первый с поиском по жестам</p>
+        </div>
+
+        <!--form-->
+            <form class="container" action={{url_for('search')}} method="get">
+                <h2> Поиск </h2> <br>
+                <div class="form-group">
+                    <input  name="request" type="text" class="form-control" placeholder="слово или жест" id="search" >
+                </div>
+                <button name="submit" type="submit" class="btn btn-success"> Искать </button>
+            </form>
+        <!--/form -->
+
+
+
+    </body>
+</html>

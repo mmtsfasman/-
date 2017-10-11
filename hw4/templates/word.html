@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+    <!-- РАБОТА С БД и CQL  найти откуда сюда высылаются переменные -
+        sign_id #как мы называем каждую страницу(адрес)
+        video #ссылка на видео
+        information #словарь для слова, где ключи - это название столбцов(перевод, этимология и т.п.), а значения - это информация в ячейке про данное слово
+        example_video #ссылка на видео с примером
+        info_example #словарь, ключи - названия столбцов, значения - содержание ячейки про данный пример  -->
+
+        <title>{{ results['translation'] }}</title> <!-- тут надо понять, как удобнее называть страницу-->
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <!-- link rel="stylesheet" href={{url_for('static', filename='css/bootstrap.css')}} -->
+    </head>
+
+    <body>
+    <div class="container-fluid">
+        <div class="row content">
+            <div class="col-sm-2 sidenav" style="background-color:#66ccff;">
+
+        <div class="text-center">
+            <h2>РЖЯ - русский словарь</h2>
+            <p>Первый с поиском по жестам</p>
+            <br>
+        </div>
+
+        <form action={{url_for('search')}} method="get">
+            <h2> Поиск </h2>
+
+            <div class="input-group">
+                <input name="request" type="text" class="form-control" placeholder="слово или жест">
+                <span class="input-group-btn">
+                  <button name="submit" class="btn btn-default" type="submit">
+                    <span class="glyphicon glyphicon-search"></span>
+                  </button>
+                </span>
+            </div>
+
+        </form>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    </div>
+
+
+
+
+
+    <div class="col-sm-10">
+        <form class="container">
+             <div class="media">
+
+                <div class="media-left">
+                    <video controls>
+                        <source src={{ results['video'] }} type="video/mp4">
+                    </video>
+                </div>
+
+                <div class="media-body">
+                    <form class="container">
+                        <h3> Запись в системе HamNoSys </h3>
+                            <p> {{ results['hamnosys'] }}</p>
+
+                        <h3>  Перевод </h3>
+                            <p> {{ results['translation'] }}</p>
+                    </form>
+                </div>
+             </div>
+
+             {%if results['etymology'] != ''%}
+                <form class="container">
+                    <h3>  Этимология </h3>
+                        <p> {{ results['etymology'] }}</p>
+                </form>
+             {%endif%}
+
+             {%if results['morphology'] != ''%}
+                <form class="container">
+                    <h3>  Составные части, морфология </h3>
+                        <p> {{ results['morphology'] }}</p>
+                </form>
+             {%endif%}
+
+            {%if results['example'] != ''%}
+                {%for ex in results['example']%}
+                    <div class="media-left">
+                        <video controls>
+                            <source src={{ results['example']['ex']['video'] }} type="video/mp4">
+                        </video>
+                    </div>
+
+                    <div class="media-body">
+                        {%if results['example']['ex']['glosses'] != ''%}
+                            <form class="container">
+                                <h3> Глоссы </h3>
+                                <p> {{ results['example']['ex']['glosses'] }}</p>
+                            </form>
+                        {%endif%}
+
+                        {%if results['example']['ex']['glosses'] != ''%}
+                            <form class="container">
+                                <h3>  Перевод </h3>
+                                <p> {{ results['example']['ex']['translation'] }}</p>
+                            </form>
+                        {%endif%}
+                    </div>
+                {%endfor%}
+            {%endif%}
+        </form>
+            </div>
+
+        </div>
+    </div>
+
+    </body>
+</html>
