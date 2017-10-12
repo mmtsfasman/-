@@ -1,0 +1,7 @@
+@au Noname #Too hard to extract from text
+@ti	Праздничная афиша
+@da	30 Апрель 2016
+@topic	Будь в курсе
+@url	http://www.belrab.ru/rubriki/bud-v-kurse/item/628-prazdnichnaya-afisha
+
+

@@ -13,20 +13,20 @@
 Контакты для дополнительной информации: www. perspektivafund.ru
 E-mail: Этот адрес электронной почты защищен от спам-ботов. У вас должен быть включен JavaScript для просмотра.
  //<!--
- document.getElementById('cloak18158').innerHTML = '';
+ document.getElementById('cloak75578').innerHTML = '';
  var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
  var path = 'hr' + 'ef' + '=';
- var addy18158 = '&#105;nf&#111;' + '&#64;';
- addy18158 = addy18158 + 'p&#101;rsp&#101;kt&#105;v&#97;f&#117;nd' + '&#46;' + 'r&#117;';
- document.getElementById('cloak18158').innerHTML += '<a ' + path + '\'' + prefix + ':' + addy18158 + '\'>' +addy18158+'<\/a>';
+ var addy75578 = '&#105;nf&#111;' + '&#64;';
+ addy75578 = addy75578 + 'p&#101;rsp&#101;kt&#105;v&#97;f&#117;nd' + '&#46;' + 'r&#117;';
+ document.getElementById('cloak75578').innerHTML += '<a ' + path + '\'' + prefix + ':' + addy75578 + '\'>' +addy75578+'<\/a>';
  //-->
  ;">Этот адрес электронной почты защищен от спам-ботов. У вас должен быть включен JavaScript для просмотра.
  //<!--
- document.getElementById('cloak65295').innerHTML = '';
+ document.getElementById('cloak61115').innerHTML = '';
  var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
  var path = 'hr' + 'ef' + '=';
- var addy65295 = '&#105;nf&#111;' + '&#64;';
- addy65295 = addy65295 + 'p&#101;rsp&#101;kt&#105;v&#97;f&#117;nd' + '&#46;' + 'r&#117;';
- document.getElementById('cloak65295').innerHTML += '<a ' + path + '\'' + prefix + ':' + addy65295 + '\'>' +addy65295+'<\/a>';
+ var addy61115 = '&#105;nf&#111;' + '&#64;';
+ addy61115 = addy61115 + 'p&#101;rsp&#101;kt&#105;v&#97;f&#117;nd' + '&#46;' + 'r&#117;';
+ document.getElementById('cloak61115').innerHTML += '<a ' + path + '\'' + prefix + ':' + addy61115 + '\'>' +addy61115+'<\/a>';
  //-->
  ;  телефон: 8 985 970 95 86.
