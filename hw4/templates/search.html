@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-
-        <title>Результаты поиска</title>
+        <title>Корпус статей belrab.ru : Результаты поиска</title>
+        
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -18,8 +18,9 @@
             <div class="col-sm-2 sidenav" style="background-color:#66ccff;">
 
         <div class="text-center">
-            <h3>РЖЯ - русский словарь</h3>
-            <p>Первый с поиском по жестам</p>
+            <h1>Корпус</h1>
+          <p>по газете belrab.ru</p>
+          <p>developer: Маша Цфасман</p>  
             <br>
         </div>
 
@@ -41,8 +42,6 @@
 
 
 
-
-
     <div class="col-sm-9">
 
         <h2> Результаты поиска <span class="badge"> {{results_num}}</span> </h2>
@@ -50,25 +49,14 @@
         {%if results_num != 0%}
             <div class="container">
                 <ul class="list-group">
-                    {%for line in results%}
-                        <div class="media">
-
-                            <div class="media-left">
-                                <video controls>
-                                    <source src={{ line['video'] }} type="video/mp4">
-                                </video>
-                            </div>
-
-                            <div class="media-body">
+                    {%for line in results%} 
+                        <div>
                                 <ul class="list-group">
-                                    <h3>Перевод</h3>
-                                    <p>{{line['translation']}}</p>
-                                    <a href="{{url_for('word', word=line['translation'])}}" class="btn btn-info">перейти к статье </a>
+                         
+                                    <a href="{{line}}" class="btn btn-info">перейти к статье </a>
                                  </ul>
-                            </div>
-
                         </div>
-
+                    
                     {%endfor%}
                 </ul>
             </div>
@@ -76,7 +64,7 @@
 
             {%else%}
                 <div class="container">
-                    <p> Ничего не найдено :( </p> <!-- тут надо добавить "возможно, вы имели в виду.." но это потом. и я пока не очень понимаю как это делается.-->
+                    <p> Ничего не найдено :( </p> 
                 </div>
 
         {%endif%}

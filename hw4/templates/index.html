@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-      <title>РЖЯ - русский словарь</title>
+      <title>Корпус статей belrab.ru</title>
 
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,15 +13,16 @@
     <body>
 
         <div class="jumbotron text-center">
-          <h1>РЖЯ - русский словарь</h1>
-          <p>Первый с поиском по жестам</p>
+          <h1>Корпус</h1>
+          <p>по газете belrab.ru</p>
+          <p>developer: Маша Цфасман</p>  
         </div>
 
         <!--form-->
             <form class="container" action={{url_for('search')}} method="get">
                 <h2> Поиск </h2> <br>
                 <div class="form-group">
-                    <input  name="request" type="text" class="form-control" placeholder="слово или жест" id="search" >
+                    <input  name="request" type="text" class="form-control" placeholder="что найдем?" id="search" >
                 </div>
                 <button name="submit" type="submit" class="btn btn-success"> Искать </button>
             </form>
